@@ -20,4 +20,7 @@ Alice.getAge(); // 33
 Alice instanceof Person; // true
 // but
 myPerson instanceof Person; // false
+meta('Comment AuthId CommentText');
+var comment = new Comment(10, 'Some text');
+comment.getCommentText();
 ```
