@@ -58,3 +58,15 @@ function get_class(classname, variables){
 function tieToWindow(classname, class_def){
 eval(class_def + `; window.${classname} = ${classname}`);
 }
+
+function meta(str){
+ var l = str.split(' ');
+ var classname = l[0];
+ var variables = [];
+ for (var i=1;i<l.length;i++){
+	variables.push(l[i]);
+ };
+ var class_def = get_class(classname, variables);
+ tieToWindow(classname, class_def);
+
+}
