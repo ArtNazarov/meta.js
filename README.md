@@ -25,4 +25,8 @@ var comment = new Comment(10, 'Some text');
 comment.getCommentText();
 func(Alice,"getName",[],"return this.name.toUpperCase();"); // replace code
 Alice.getName(); // "ALICE"
+// rewrite prototype
+func(Person.prototype,"getName",[],"return this.name.toUpperCase();");
+var Julia = new Person("Julia", 10);
+Julia.getName(); // JULIA
 ```
