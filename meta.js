@@ -70,3 +70,6 @@ function meta(str){
  tieToWindow(classname, class_def);
 
 }
+
+function func(obj, name, args, body){
+  return eval( `obj.${name} = function ${name}(${args.join(',')}){ ${body} }`); }
