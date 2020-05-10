@@ -23,4 +23,6 @@ myPerson instanceof Person; // false
 meta('Comment AuthId CommentText');
 var comment = new Comment(10, 'Some text');
 comment.getCommentText();
+func(Alice,"getName",[],"return this.name.toUpperCase();"); // replace code
+Alice.getName(); // "ALICE"
 ```
