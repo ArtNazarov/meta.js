@@ -11,7 +11,7 @@ var OtherDef = myPerson.__proto__.constructor;
 var OtherPerson = new OtherDef('Liza', 20);
 OtherPerson.getName(); // 'Liza'
 OtherPerson instanceof OtherDef; // true
-OtherPerson instanceof Person; // reference error
+// OtherPerson instanceof Person;  reference error
 
 // Tie class to window object
 tieToWindow('Person', class_def);
@@ -29,4 +29,6 @@ Alice.getName(); // "ALICE"
 func(Person.prototype,"getName",[],"return this.name.toUpperCase();");
 var Julia = new Person("Julia", 10);
 Julia.getName(); // JULIA
+// but
+myPerson.getName(); // test
 ```
