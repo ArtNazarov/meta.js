@@ -6,4 +6,4 @@ myPerson.getAge(); // 10;
 myPerson.getName(); // 'test';
 myPerson.setAge(100);
 myPerson.getAge(100); // 100
-```;
+```
