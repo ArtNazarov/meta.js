@@ -54,3 +54,7 @@ function get_methods(variables){
 function get_class(classname, variables){
 	return class_wrap(classname, get_methods(variables));
 }
+
+function tieToWindow(classname, class_def){
+eval(class_def + `; window.${classname} = ${classname}`);
+}
