@@ -5,10 +5,19 @@ myPerson.getAge(); // 10;
 myPerson.getName(); // 'test';
 myPerson.setAge(100);
 myPerson.getAge(100); // 100
+
 // Using prototypes
 var OtherDef = myPerson.__proto__.constructor;
 var OtherPerson = new OtherDef('Liza', 20);
 OtherPerson.getName(); // 'Liza'
 OtherPerson instanceof OtherDef; // true
 OtherPerson instanceof Person; // reference error
+
+// Tie class to window object
+tieToWindow('Person', class_def);
+var Alice = new Person('Alice', 33);
+Alice.getAge(); // 33
+Alice instanceof Person; // true
+// but
+myPerson instanceof Person; // false
 ```
